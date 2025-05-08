@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,27 +14,62 @@
     Your browser does not support the video tag.
   </video>
 
-  <!-- Optional canvas effect -->
+  <!-- Matrix background (optional over video) -->
   <canvas id="background"></canvas>
 
-  <div class="logo-container">
+    <!-- Logo + Title -->
+    <div class="logo-container">
+
     <h1 class="explode-text">
-      <span>M</span><span>A</span><span>T</span><span>R</span><span>I</span><span>C</span><span>A</span>
+      <span>M</span>
+      <span>A</span>
+      <span>T</span>
+      <span>R</span>
+      <span>I</span>
+      <span>C</span>
+      <span>A</span>
     </h1>
+
     <p class="subtitle">ROLEPLAY</p>
   </div>
 
+  <!-- Discord Icon -->
   <div class="socials">
-    <a href="https://discord.gg/" target="_blank" title="Join us on Discord">
+    <a href="https://discord.gg/mddJKKwB" target="_blank" title="Join us on Discord">
       <img src="discord.png" alt="Discord" class="social-icon">
     </a>
   </div>
 
-  <!-- Background music (triggered via ALT) -->
-  <audio id="bgmusic" loop>
-    <source src="music.mp3" type="audio/mpeg">
+  <!-- Background Music-->>
+  <audio id="bg-music" autoplay loop>
+    <source src="bgmusic.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
   </audio>
 
+  <script>
+    document.addEventListener('keydown', function (event) {
+      if (event.key === "Alt") {
+        const audio = document.getElementById('bgmusic');
+        audio.play().then(() => {
+          console.log('Audio started with Alt key');
+        }).catch(err => {
+          console.error('Autoplay error:', err);
+        });
+      }
+    });
+    </script>
+
   <script src="script.js"></script>
+  <script>
+    // Extra explode effect per letter
+    document.querySelectorAll('.explode-text span').forEach((letter, index) => {
+      letter.style.animationDelay = `${index * 0.1}s`;
+    });
+  </script>
 </body>
 </html>
+
+<script src="script.js"></script>
+<button id="hoverBtn" style="display: none; position: absolute; top: 60px; left: 20px; z-index: 999;">
+  Alt Action
+</button>
