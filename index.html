@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MATRICA LOMUSPELE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background video -->
+  <video autoplay muted loop id="bg-video">
+    <source src="background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Optional canvas effect -->
+  <canvas id="background"></canvas>
+
+  <div class="logo-container">
+    <h1 class="explode-text">
+      <span>M</span><span>A</span><span>T</span><span>R</span><span>I</span><span>C</span><span>A</span>
+    </h1>
+    <p class="subtitle">LOMUSPELE</p>
+  </div>
+
+  <div class="socials">
+    <a href="https://discord.gg/mddJKKwB" target="_blank" title="Join us on Discord">
+      <img src="discord.png" alt="Discord" class="social-icon">
+    </a>
+  </div>
+
+  <!-- Background music (triggered via ALT) -->
+  <audio id="bgmusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
