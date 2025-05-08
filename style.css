@@ -31,13 +31,17 @@ canvas#background {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  gap: 24px; /* distance between word */
+  align-items: center;
+  justify-content: center;
 }
 
 .explode-text span {
   display: inline-block;
   font-size: 64px;
-  animation: explode 1s ease-out forwards;
+  animation: explode 3.5s ease-out forwards;
   opacity: 0;
 }
 
