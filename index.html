@@ -67,23 +67,60 @@
 
 <button id="openRulesBtn">📜 Server Rules</button>
 
-<!-- Server Rules Panel -->
+<!-- Open Rules Button -->
+<button id="openRulesBtn">📜 Server Rules</button>
+
+<!-- Rules Modal -->
 <div id="rulesModal">
   <div class="modal-content">
     <span id="closeModal">&times;</span>
     <h2>Server Rules</h2>
-    <ul>
-      <li>1. No RDM (Random Deathmatch) – All killings must have a valid RP reason.</li>
-      <li>2. No VDM (Vehicle Deathmatch) – Do not run people over without a roleplay context.</li>
-      <li>3. Always stay in character – Breaking character is not allowed unless permitted by staff.</li>
-      <li>4. Use realistic RP – Act as you would in real life, no superpowers or unrealistic behavior.</li>
-      <li>5. Respect all players and staff – No harassment, racism, or toxic behavior.</li>
-      <li>6. No meta-gaming – Don’t use external info (e.g., Discord, stream) in RP.</li>
-      <li>7. No power-gaming – Don’t force RP on others or act beyond your character’s limits.</li>
-      <li>8. No exploiting bugs or cheating – Instant ban.</li>
-      <li>9. Follow staff instructions at all times – Arguing with staff may lead to removal.</li>
-      <li>10. English only in voice and public text chats unless otherwise allowed.</li>
-    </ul>
+
+    <!-- Tabs -->
+    <div class="tab-buttons">
+      <button class="tab-link active" data-tab="general">📜 General</button>
+      <button class="tab-link" data-tab="police">🚔 Police</button>
+      <button class="tab-link" data-tab="ems">🚑 EMS</button>
+      <button class="tab-link" data-tab="civilian">💼 Civilian</button>
+    </div>
+
+    <!-- Tab Contents -->
+    <div id="general" class="tab-content active">
+      <ul>
+        <li>1. Mes esam Latvijas serveris. Jums vienmer jaruna un jasaprot latviesu valoda, bet mes neesam pret ari, ja kads izmanto internacionalo anglu valodu.</li>
+        <li>2. Jums ir jabut stradajosam mikrofonam bez fona troksna un kristaldzidru ievadi. Balss mainitaji ir pienemami, tacu tiem jabut saprotamiem, un tiem jabut ne parak skaliem, parak klusiem vai arkartigi augstam vai zemem.</li>
+        <li>3. Neesiet toksisks vai jebkada veida toksicitate citus.</li>
+        <li>4. Kludu, ekspluataciju vai uzlausanas izmantosana ir aizliegta. Ja atrodat klumi vai ekspluataciju, ludzu, informejiet administratoru komandu, izmantojot bilesu sistemu.</li>
+        <li>5. Atrodoties pilseta un Discord, ieverojiet Twitch/Youtube/TikTok pakalpojumu sniegsanas noteikumus (ToS), Twitch/Youtube/TikTok kopienas vadlinijas un Discord pakalpojumu sniegsanas noteikumus.</li>
+      </ul>
+    </div>
+
+    <div id="police" class="tab-content">
+      <ul>
+        <li>1. Aizliegts, LSPD pardot/atdot organizacijas inventaru</li>
+        <li>2. Aizliegts zagt LSPD organizacijas inventaru/lidzeklus (BAN + CK). (Visas konfiscetas mantas automatiski tiek uzskatitas par LSPD inventaru.)</li>
+        <li>3. Aizliegts atklat uguni pirmajiem pret noziedzniekiem (ja noziedziga persona nav ar letalu ieroci atklajusi uguni pret policijas darbiniekiem), drikst izmantot teizeri.</li>
+        <li>4. Aizliegts laupisanas sakuma izsaut transportlidzeklim riepas vai pardurt tas.</li>
+        <li>5. Kategoriski aizliegts veikt reidu kadas personas īpasumam, ja nav persona piekerta noziedzīgas darbibas un nav uzsakta izmeklesana konkretas personas noziegumiem.</li>
+        <li>6. Aizliegts velkat apgerbu, kurs ir identisks/pietuvinats LSPD vai citu legalo organizaciju apgerbam (Jabut labam, pamatotam RP iemeslam).</li>
+        <li>7. Ja policija ievac pietiekami daudz informaciju par nelegalo organizaciju un to nelegalo darbibam, tad organizacija var tikt konfisceta vai likvideta.</li>
+        <li>8. LSPD darbiniekiem ir aizliegts piedalities laupisanas off-duty.</li>
+        <li>9. Stradajot legala organizācija ir aizliegts nodarboties ar nelegalam lietam, taja skaita palidzet nelegalajam organizacijam/grupejumiem</li>
+      </ul>
+    </div>
+
+    <div id="ems" class="tab-content">
+      <ul>
+        <li>Comming Soon</li>
+      </ul>
+    </div>
+
+    <div id="civilian" class="tab-content">
+      <ul>
+        <li>Comming Soon</li>
+      </ul>
+    </div>
   </div>
 </div>
+
 

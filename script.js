@@ -40,26 +40,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("rulesModal");
-  const close = document.getElementById("closeModal");
   const openBtn = document.getElementById("openRulesBtn");
+  const closeBtn = document.getElementById("closeModal");
 
-  // Show modal on page load
+  // Show on load
   modal.style.display = "flex";
 
-  // Close on X click
-  close.onclick = function () {
-    modal.style.display = "none";
+  // Open/close logic
+  openBtn.onclick = () => modal.style.display = "flex";
+  closeBtn.onclick = () => modal.style.display = "none";
+  window.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
   };
 
-  // Reopen modal on button click
-  openBtn.onclick = function () {
-    modal.style.display = "flex";
-  };
+  // Tab switching
+  const tabs = document.querySelectorAll(".tab-link");
+  const contents = document.querySelectorAll(".tab-content");
 
-  // Close when clicking outside
-  window.onclick = function (event) {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  };
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      contents.forEach(c => c.classList.remove("active"));
+
+      tab.classList.add("active");
+      document.getElementById(tab.dataset.tab).classList.add("active");
+    });
+  });
 });
