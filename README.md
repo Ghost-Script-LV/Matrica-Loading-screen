@@ -88,3 +88,6 @@ It is designed to be compatible with **FiveM,** ensuring smooth performance acro
 **Conclusion:**
 The **MATRICA Roleplay Loading Screen** combines creativity, user interactivity, and advanced design to provide players with an unforgettable pre-game experience. 
 It sets the tone for the roleplay server, giving players a sneak peek into the world they are about to join while keeping them engaged during the loading process.
+
+Server.cfg
+ensure Matrica-Loading-Screen
