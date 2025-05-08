@@ -8,6 +8,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <button id="mute-toggle">🔊 Mute</button>
+  <audio id="bg-music" src="music.mp3" autoplay loop muted></audio>
+  <script src="script.js"></script>
+</body>
+</html>
   <!-- Background video -->
   <video autoplay muted loop id="bg-video">
     <source src="background.mp4" type="video/mp4">
@@ -40,24 +45,10 @@
     </a>
   </div>
 
-  <!-- Background Music-->>
-  <audio id="bg-music" autoplay loop>
-    <source src="bgmusic.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-
-  <script>
-    document.addEventListener('keydown', function (event) {
-      if (event.key === "Alt") {
-        const audio = document.getElementById('bgmusic');
-        audio.play().then(() => {
-          console.log('Audio started with Alt key');
-        }).catch(err => {
-          console.error('Autoplay error:', err);
-        });
-      }
-    });
-    </script>
+  <!-- Background Music-->
+  <audio id="loadingMusic" autoplay loop>
+    <source src="bgmusic.mp3" type="audio/mp3">
+  </audio>  
 
   <script src="script.js"></script>
   <script>
@@ -73,3 +64,26 @@
 <button id="hoverBtn" style="display: none; position: absolute; top: 60px; left: 20px; z-index: 999;">
   Alt Action
 </button>
+
+<button id="openRulesBtn">📜 Server Rules</button>
+
+<!-- Server Rules Panel -->
+<div id="rulesModal">
+  <div class="modal-content">
+    <span id="closeModal">&times;</span>
+    <h2>Server Rules</h2>
+    <ul>
+      <li>1. No RDM (Random Deathmatch) – All killings must have a valid RP reason.</li>
+      <li>2. No VDM (Vehicle Deathmatch) – Do not run people over without a roleplay context.</li>
+      <li>3. Always stay in character – Breaking character is not allowed unless permitted by staff.</li>
+      <li>4. Use realistic RP – Act as you would in real life, no superpowers or unrealistic behavior.</li>
+      <li>5. Respect all players and staff – No harassment, racism, or toxic behavior.</li>
+      <li>6. No meta-gaming – Don’t use external info (e.g., Discord, stream) in RP.</li>
+      <li>7. No power-gaming – Don’t force RP on others or act beyond your character’s limits.</li>
+      <li>8. No exploiting bugs or cheating – Instant ban.</li>
+      <li>9. Follow staff instructions at all times – Arguing with staff may lead to removal.</li>
+      <li>10. English only in voice and public text chats unless otherwise allowed.</li>
+    </ul>
+  </div>
+</div>
+
