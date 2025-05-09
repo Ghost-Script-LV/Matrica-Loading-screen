@@ -11,7 +11,7 @@ Featuring Matrix-style animations, background music, a custom cursor, and video 
 
 **Custom Cursor:** Replace the default cursor with your own image to create a more personalized experience.
 
-**Alt Key Music Start:** Background music can be triggered using the Alt key on the keyboard.
+**StartBar Music Start:** Background music can be triggered using the Alt key on the keyboard.
 
 **Discord Integration:** A clickable Discord icon allows players to easily join the server's community.
 
